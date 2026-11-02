@@ -1,0 +1,90 @@
+
+.favorites {
+    width: 100%;
+    padding: 25px 0;
+}
+
+.favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.favorites-header h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.favorites-header p {
+    color: #999;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.clear-favorites {
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 11px 17px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.favorites-empty {
+    text-align: center;
+    max-width: 500px;
+    margin: 70px auto;
+    padding: 40px 20px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 15px;
+}
+
+.empty-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.favorites-empty h2 {
+    color: white;
+    margin-bottom: 12px;
+}
+
+.favorites-empty p {
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.explore-button {
+    display: inline-block;
+    background: #e50914;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+.explore-button:hover {
+    background: #b80710;
+}
+
+@media (max-width: 600px) {
+    .favorites-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .favorites-header h1 {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,194 @@
+
+.home {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 45px 15px;
+    background: linear-gradient(135deg, #1b1b1b, #303030);
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    color: white;
+    margin-bottom: 12px;
+}
+
+.hero-section p {
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+.search-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #151515;
+    color: white;
+    font-size: 15px;
+}
+
+.search-input:focus {
+    outline: 2px solid #e50914;
+}
+
+.search-button,
+.reset-button {
+    background: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.search-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.clear-button {
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+.movie-section {
+    width: 100%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.section-header h2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.section-header p {
+    color: #999;
+    font-size: 13px;
+}
+
+.movie-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sort-select {
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 22px;
+    width: 100%;
+}
+
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #444;
+    border-top-color: #e50914;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message,
+.no-results {
+    text-align: center;
+    padding: 45px 15px;
+    color: white;
+}
+
+.error-message button,
+.no-results button {
+    display: block;
+    margin: 15px auto 0;
+    background: #e50914;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.no-results span {
+    font-size: 45px;
+}
+
+.no-results h2 {
+    margin: 12px 0;
+}
+
+.no-results p {
+    color: #999;
+}
+
+@media (max-width: 600px) {
+    .home {
+        padding: 10px 0;
+    }
+
+    .hero-section {
+        padding: 30px 12px;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .section-header {
+        align-items: flex-start;
+    }
+
+    .search-form {
+        gap: 6px;
+    }
+
+    .search-button {
+        padding: 10px 13px;
+    }
+}
